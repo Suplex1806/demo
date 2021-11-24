@@ -16,14 +16,14 @@ var Message = mongoose.model('Message',{
 
 var dbUrl = process.env.MONGO_URL ||'mongodb+srv://Arun:Kavya1508@test.8bq8u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-app.get('/socket.io/messages', (req, res) => {
+app.get('/messages', (req, res) => {
   Message.find({},(err, messages)=> {
     res.send(messages);
   })
 })
 
 
-app.get('/socket.io/messages/:user', (req, res) => {
+app.get('/messages/:user', (req, res) => {
   var user = req.params.user
   Message.find({name: user},(err, messages)=> {
     res.send(messages);
