@@ -41,13 +41,13 @@
     }
 
     function getMessages(){
-      $.get('http:/messages', (data) => {
+      $.get('https:try-com.herokuapp.com/messages', (data) => {
         data.forEach(addMessages);
       })
     }
 
     function sendMessage(message){
-      $.post('http:/messages', message)
+      $.post('https:try-com.herokuapp.com/messages', message)
     }
 </script>
 </body>
