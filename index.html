@@ -41,13 +41,13 @@
     }
 
     function getMessages(){
-      $.get('https://try-com.herokuapp.com/messages', (data) => {
+      $.get('https://nodejs-dfh7.onrender.com/messages', (data) => {
         data.forEach(addMessages);
       })
     }
 
     function sendMessage(message){
-      $.post('https://try-com.herokuapp.com/messages', message)
+      $.post('https://nodejs-dfh7.onrender.com/messages', message)
     }
 </script>
 </body>
