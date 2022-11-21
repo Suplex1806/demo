@@ -61,7 +61,7 @@ io.on('connection', () =>{
   console.log('a user is connected')
 })
 
-mongoose.connect(dbUrl,{useUnifiedTopology: true }  ,(err) => {
+mongoose.connect(dbUrl,{ useNewUrlParser: false }  ,(err) => {
   console.log('mongodb connected',err);
 })
 
