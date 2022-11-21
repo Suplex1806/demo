@@ -61,7 +61,7 @@ io.on('connection', () =>{
   console.log('a user is connected')
 })
 
-mongoose.connect('mongodb+srv://Arun:Kavya1508@test.8bq8u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true }  ,(err) => {
+mongoose.createConnection('mongodb+srv://Arun:Kavya1508@test.8bq8u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true }  ,(err) => {
   console.log('mongodb connected',err);
 })
 
