@@ -61,9 +61,10 @@ io.on('connection', () =>{
   console.log('a user is connected')
 })
 
-mongoose.createConnection('mongodb+srv://Arun:Kavya1508@test.8bq8u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true }  ,(err) => {
+mongoose.connect(dbUrl ,{useMongoClient : true} ,(err) => {
   console.log('mongodb connected',err);
 })
+
 
 var server = http.listen(process.env.PORT||3000, () => {
   console.log('server is running on port', server.address().port);
