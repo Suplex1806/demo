@@ -41,13 +41,13 @@
     }
 
     function getMessages(){
-      $.get('https://chat-orcin-five.vercel.app/messages', (data) => {
+      $.get('https://newapp-v30t.onrender.com/messages', (data) => {
         data.forEach(addMessages);
       })
     }
 
     function sendMessage(message){
-      $.post('https://chat-orcin-five.vercel.app/messages', message)
+      $.post('https://newapp-v30t.onrender.com/messages', message)
     }
 </script>
 </body>
